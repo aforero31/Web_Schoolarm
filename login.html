@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <title>Schoolarm</title>
+</head>
+<body>
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <encabezado>
+                    Registrate
+                </encabezado>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <login>
+                    
+                    <div class="mb-3">
+                        <label for="login" class="form-label">Correo o celular</label>
+                        <input type="text" class="form-control" id="login" placeholder="Ingrese celular o correo registrado">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password">
+                    </div>
+
+                </login>
+                
+            </div>
+            <div class="col-sm"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <mensaje1><a id="openlogin" data-toggle="modal" data-target="#exampleModal">¿Olvidaste tu contraseña?</a></mensaje1>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-primary botonppal" onclick="abrir('home.html')">Ingresar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <mensaje2>¿Aún no te has registrado?</mensaje2>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-secondary botonsecundario" onclick="abrir('registro.html')">Registrarse</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+
+
+
+
+
+    </div>
+
+            <!--Modal-->
+            <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Restablecer contraseña</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                            <label for="login" class="form-label">Correo o celular</label>
+                            <input type="text" class="form-control" id="login" placeholder="Ingrese celular o correo registrado">
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary">Enviar</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="js/funciones.js"></script>
+    <script>
+        $(document).ready(function () {
+          $("a").click(function (evento) {
+            $("#exampleModal").show();
+          });
+
+          $(".close").click(function (evento) {
+            $("#exampleModal").hide();
+          });
+        });
+      </script>
+</body>
+</html>
